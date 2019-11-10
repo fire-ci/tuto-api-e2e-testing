@@ -15,7 +15,6 @@ COPY yarn.lock .
 
 FROM base AS dependencies
 
-# Post install just installs webdriver which we don't nneed in Docker because selenium grid is used instead.
 RUN yarn
 
 FROM dependencies AS runtime
